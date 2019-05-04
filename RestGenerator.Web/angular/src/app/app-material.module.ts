@@ -3,11 +3,11 @@ import { NgModule } from '@angular/core';
 import { MatIconModule } from '@angular/material';
 
 const materialModules = [
-  MatIconModule
+    MatIconModule
 ];
 
 @NgModule({
-  imports: materialModules,
-  exports: materialModules
+    imports: materialModules,
+    exports: materialModules
 })
 export class AppMaterialModule { }

@@ -8,9 +8,9 @@ const getAllApisUrl: string = '/api/api';
 @Injectable()
 export class ServerDataService {
 
-  constructor(private readonly httpClient: HttpClient) { }
+    constructor(private readonly httpClient: HttpClient) { }
 
-  getApis(): Observable<Api[]> {
-    return this.httpClient.get<Api[]>(getAllApisUrl);
-  }
+    getApis(): Observable<Api[]> {
+        return this.httpClient.get<Api[]>(getAllApisUrl);
+    }
 }

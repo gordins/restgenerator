@@ -12,24 +12,24 @@ import { NotFoundComponent } from './not-found/not-found.component';
 
 import { DataService, ServerDataService } from './shared';
 @NgModule({
-  declarations: [
-    AppComponent,
-    HomeComponent,
-    NotFoundComponent
-  ],
-  imports: [
-    BrowserModule,
-    BrowserAnimationsModule,
-    HttpClientModule,
-    AppRoutingModule,
-    AppMaterialModule
-  ],
-  providers: [
-    DataService,
-    ServerDataService
-  ],
-  bootstrap: [
-    AppComponent
-  ]
+    declarations: [
+        AppComponent,
+        HomeComponent,
+        NotFoundComponent
+    ],
+    imports: [
+        BrowserModule,
+        BrowserAnimationsModule,
+        HttpClientModule,
+        AppRoutingModule,
+        AppMaterialModule
+    ],
+    providers: [
+        DataService,
+        ServerDataService
+    ],
+    bootstrap: [
+        AppComponent
+    ]
 })
 export class AppModule { }
