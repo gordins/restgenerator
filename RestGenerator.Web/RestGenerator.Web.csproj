@@ -1,0 +1,51 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+    <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+    <TypeScriptToolsVersion>3.1</TypeScriptToolsVersion>
+    <LangVersion>8.0</LangVersion>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="wwwroot\**" />
+    <Content Remove="wwwroot\**" />
+    <EmbeddedResource Remove="wwwroot\**" />
+    <None Remove="wwwroot\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="angular\src\app\shared\models\api.model.ts" />
+    <None Remove="angular\src\app\shared\models\enums\field-dependency-type.enum.ts" />
+    <None Remove="angular\src\app\shared\models\enums\field-type.enum.ts" />
+    <None Remove="angular\src\app\shared\models\enums\index.ts" />
+    <None Remove="angular\src\app\shared\models\enums\resource-relationship-type.enum.ts" />
+    <None Remove="angular\src\app\shared\models\field-dependency.model.ts" />
+    <None Remove="angular\src\app\shared\models\field.model.ts" />
+    <None Remove="angular\src\app\shared\models\index.ts" />
+    <None Remove="angular\src\app\shared\models\resource-relationship.model.ts" />
+    <None Remove="angular\src\app\shared\models\resource.model.ts" />
+    <None Remove="angular\src\app\shared\services\index.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.App" />
+    <PackageReference Include="Microsoft.AspNetCore.Razor.Design" Version="2.2.0" PrivateAssets="All" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\RestGenerator.Infrastructure\RestGenerator.Infrastructure.csproj" />
+    <ProjectReference Include="..\RestGenerator.Service\RestGenerator.Service.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <TypeScriptCompile Include="angular\src\app\shared\models\enums\field-type.enum.ts" />
+    <TypeScriptCompile Include="angular\src\app\shared\models\enums\index.ts" />
+    <TypeScriptCompile Include="angular\src\app\shared\models\field.model.ts" />
+    <TypeScriptCompile Include="angular\src\app\shared\models\resource.model.ts" />
+    <TypeScriptCompile Include="angular\src\app\shared\models\api.model.ts" />
+    <TypeScriptCompile Include="angular\src\app\shared\models\index.ts" />
+    <TypeScriptCompile Include="angular\src\app\shared\services\index.ts" />
+  </ItemGroup>
+
+</Project>
