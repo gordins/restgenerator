@@ -29,7 +29,7 @@ WHERE r.[ApiId] = @ApiId";
             {
                 var resources = new Dictionary<Guid, Resource>();
 
-                db.Query(Sql, (Func<Resource, Field, Resource>) ((r, f) =>
+                db.Query(Sql, (Func<Resource, Field, Resource>)((r, f) =>
                 {
                     if (!resources.TryGetValue(r.Id, out var resource))
                     {
@@ -57,7 +57,7 @@ WHERE r.[Id] = @Id";
             {
                 Resource resource = null;
 
-                db.Query(Sql, (Func<Resource, Field, Resource>) ((r, f) =>
+                db.Query(Sql, (Func<Resource, Field, Resource>)((r, f) =>
                 {
                     if (resource == null)
                     {
