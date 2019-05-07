@@ -52,7 +52,7 @@ namespace RestGenerator.Service.Implementation.Mapper
                 Id = field.Id,
                 ResourceId = field.ResourceId,
                 Name = field.Name,
-                Type = (int) field.Type,
+                Type = (int)field.Type,
                 IsEncrypted = field.IsEncrypted,
                 IsRequired = field.IsRequired,
                 IsUnique = field.IsUnique
