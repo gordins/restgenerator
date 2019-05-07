@@ -10,7 +10,7 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
-import { DataService, ServerDataService } from './shared';
+import { DataService } from './shared';
 @NgModule({
     declarations: [
         AppComponent,
@@ -25,8 +25,7 @@ import { DataService, ServerDataService } from './shared';
         AppMaterialModule
     ],
     providers: [
-        DataService,
-        ServerDataService
+        DataService
     ],
     bootstrap: [
         AppComponent
