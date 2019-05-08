@@ -1,11 +1,15 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { ApisComponent } from './apis/apis.component';
+import { ApiDetailsComponent } from './api-details/api-details.component';
 
 const routes: Routes = [
-    { path: 'home', component: HomeComponent },
-    { path: '', redirectTo: '/home', pathMatch: 'full' },
+    { path: 'detail/:id', component: ApiDetailsComponent },
+    { path: 'apis', component: ApisComponent },
+    { path: 'dashboard', component: DashboardComponent },
+    { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
     { path: '**', component: NotFoundComponent }
 ];
 
