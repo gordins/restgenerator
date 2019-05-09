@@ -1,3 +1,10 @@
 <p>
-  api-details works!
+    {{api.name}}
+</p>
+<p>
+    {{api.encryptionKey}}
+</p>
+<p *ngFor="let resource of api.resources">
+    resource.name
+    resource.id
 </p>

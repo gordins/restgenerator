@@ -18,6 +18,10 @@ export class DataService {
         return this.http.get<Api[]>(apiUrl).pipe(take(1));
     }
 
+    getApi(id: string): Observable<Api> {
+        return this.http.get<Api>(`${apiUrl}/${id}`).pipe(take(1));
+    }
+
     addApi(api: Api): Observable<Api> {
         return this.http.post<Api>(apiUrl, api).pipe(take(1));
     }

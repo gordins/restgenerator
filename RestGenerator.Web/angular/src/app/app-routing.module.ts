@@ -6,7 +6,7 @@ import { ApisComponent } from './apis/apis.component';
 import { ApiDetailsComponent } from './api-details/api-details.component';
 
 const routes: Routes = [
-    { path: 'detail/:id', component: ApiDetailsComponent },
+    { path: 'api/:id', component: ApiDetailsComponent },
     { path: 'apis', component: ApisComponent },
     { path: 'dashboard', component: DashboardComponent },
     { path: '', redirectTo: '/dashboard', pathMatch: 'full' },

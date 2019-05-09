@@ -13,15 +13,16 @@ export class ApisComponent implements OnInit {
 
     constructor(private readonly dataService: DataService) { }
 
-    ngOnInit() {
+    ngOnInit(): void {
         this.getApis();
-    }
-
-    onSelect(api: Api): void {
-        this.selectedApi = api;
     }
 
     getApis(): void {
         this.dataService.getApis().subscribe(apis => this.apis = apis);
+    }
+
+    delete(api: Api): void {
+        this.apis = this.apis.filter(a => a.id !== api.id);
+        this.dataService.deleteApi(api.id).subscribe();
     }
 }

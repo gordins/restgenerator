@@ -1,4 +1,10 @@
-<p *ngFor="let api of apis">
-    {{api.name}}
-    {{api.encryptionKey}}
-</p>
+<h2>Apis</h2>
+
+<ul>
+    <li *ngFor="let api of apis">
+        <a routerLink="/api/{{api.id}}">
+            {{api.name}}
+        </a>
+        <button title="delete api" (click)="delete(api)"> x </button>
+    </li>
+</ul>
