@@ -1,10 +1,21 @@
 <h2>Apis</h2>
-
-<ul>
-    <li *ngFor="let api of apis">
-        <a routerLink="/api/{{api.id}}">
-            {{api.name}}
-        </a>
-        <button title="delete api" (click)="delete(api)"> x </button>
-    </li>
-</ul>
+<div class="cards">
+    <mat-card class="card">
+        <mat-card-content>
+            <mat-icon class="addIcon" color="primary">add_circle</mat-icon>
+            <!-- <mat-icon svgIcon="add_circle"></mat-icon> -->
+        </mat-card-content>
+    </mat-card>
+    <mat-card *ngFor="let api of apis" class="card">
+        <mat-card-header>
+            <mat-card-title>{{api.name}}</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+            <p> Info bout api </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <a mat-flat-button color="primary" routerLink="/apis/{{api.id}}">Details</a>
+            <button mat-flat-button color="warn" (click)="delete(api)">Delete</button>
+        </mat-card-actions>
+    </mat-card>
+</div>
